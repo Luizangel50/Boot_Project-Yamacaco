@@ -2,6 +2,6 @@
 
 Projeto de CES-22
 
-Para acessar os arquivos do projeto, basta entrar na pasta 'Boot_Project' (First Commit)
+Para acessar os arquivos do projeto, basta entrar na pasta 'Boot_Project' (Second Commit)
 
 As classes estao em 'package0' e 'package1'
