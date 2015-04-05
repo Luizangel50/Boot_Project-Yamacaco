@@ -22,8 +22,8 @@ import java.util.logging.Logger;
 import javax.swing.*;
 import javax.swing.table.*;
 
-public class Face1 implements ActionListener {
-    
+public class Face1 implements ActionListener {    
+        
     //Variables declaration
     public JFrame frame;
     private JButton btnShowHyperlinks, btnAdd, btnModify;
@@ -74,14 +74,14 @@ public class Face1 implements ActionListener {
             ResultSetMetaData md = rs.getMetaData();
             int columns = md.getColumnCount();
             
-            for(int i = 1; i <= columns; i++){
+            for(int i = 1; i < columns-1; i++){
                 columnNames.addElement(md.getColumnName(i));
             }
        
             while(rs.next()){
                 Vector<Object> row = new Vector<Object>(columns);
                 
-                for(int i = 1; i <= columns; i++){
+                for(int i = 1; i < columns-1; i++){
                     row.addElement(rs.getObject(i));
                 }
                 dados.addElement(row);
@@ -118,7 +118,7 @@ public class Face1 implements ActionListener {
     void initialize() throws FileNotFoundException {
         //JFrame settings
         frame = new JFrame("Hyperlinks");
-        frame.setBounds(100, 100, 350, 250);
+        frame.setBounds(450, 150, 350, 250);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().setLayout(null);
         

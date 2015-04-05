@@ -29,7 +29,6 @@ public class Face3 extends Face1 {
     
     public Face3() throws FileNotFoundException {
         JFrame frameAdd = new JFrame("Add hyperlinks");
-        
         jLabel1.setText("Link:");
         jLabel2.setText("Name:");
         jLabel3.setText("Meta-Tags:");
@@ -166,7 +165,7 @@ public class Face3 extends Face1 {
         SimpleDateFormat format = new SimpleDateFormat("E dd/MM/yyyy 'às' HH:mm:ss");
         try {
             stmt = Boot_DB.createStatement();
-            stmt.execute("insert into " + table + " values ('" + jTextField1.getText() + "','"
+            stmt.execute("insert into " + table + " (Hyperlink, Name, Tag, Comment, Creation, Modification) values ('" + jTextField1.getText() + "','"
                     + jTextField2.getText() + "','" + jTextField3.getText() + "','" + jTextField4.getText() + "','" + format.format(data) + "','" + format.format(data) + "')");
             stmt.close();
         } catch (SQLException e) {

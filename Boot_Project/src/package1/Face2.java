@@ -10,7 +10,6 @@ public class Face2 extends Face1 {
         Read();
         JScrollPane jScrollPane1 = new JScrollPane();
         JFrame frameShow = new JFrame("Hyperlinks");
-        frameShow.setBounds(100, 100, 500, 350);
         JTable tables = new JTable(getmodel());
         tables.setEnabled(false);
         JScrollPane scrollPane = new JScrollPane(tables);

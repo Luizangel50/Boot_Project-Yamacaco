@@ -28,6 +28,7 @@ public class Face4 extends Face1 {
         
     public Face4() throws FileNotFoundException {
         JFrame frameMod = new JFrame("Modify");
+        frameMod.setBounds(450, 150, 350, 250);
         
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -128,7 +129,7 @@ public class Face4 extends Face1 {
         try {
             stmt = Boot_DB.createStatement();
             ResultSet rs = stmt.executeQuery("select * from " + table + " where name like '%" + jTextField1.getText() +
-                    "%' or tag like '%" + jTextField1.getText() + "%'");
+                    "%' or tag like '%" + jTextField1.getText() + "%' or hyperlink like '%" + jTextField1.getText() + "%'");
             
             new Face5(rs);
             
